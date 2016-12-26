@@ -1,20 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import './rxjs-extensions';
 
-import { AppComponent } from './app.component';
+import { BrowserModule }            from '@angular/platform-browser';
+import { NgModule }                 from '@angular/core';
+import { FormsModule }              from '@angular/forms';
+import { HttpModule }               from '@angular/http';
+
+import { AppComponent }             from './app.component';
+import { AppRoutingModule }         from './app-routing.module';
+import { DebateComponent }          from './debate/debate.component';
+import { LoginComponent }           from './login/login.component';
+import { MainComponent }            from './main/main.component';
+
+import { ClientService }            from './client/client.service';
+
+import { AppGuard }                 from './app.guard';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [ AppComponent, DebateComponent, LoginComponent, MainComponent ],
+  imports: [ BrowserModule, FormsModule, HttpModule, AppRoutingModule ],
+  providers: [ ClientService, AppGuard ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

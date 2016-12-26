@@ -1,0 +1,204 @@
+<div class="container">
+  
+<div class="row">
+  
+  <div class="col-md-9">
+    <div class="panel panel-primary " style="box-shadow: 0 2px 7px">
+          <div class="panel-heading">
+            <h3 class="panel-title">Debates</h3>
+            <div class="pull-right">
+              <span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+                <i class="glyphicon glyphicon-filter"></i>
+              </span>
+            </div>
+          </div>
+          <div class="panel-body">
+            <input type="text" class="form-control" id="task-table-filter" data-action="filter" data-filters="#task-table" placeholder="Filter Tasks" />
+          </div>
+          <div id="tablescroll">
+          <table class="table table-hover" id="task-table" >
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Debate Topic</th>
+                <th>User</th>
+                <th>Round Timer</th>
+              </tr>
+            </thead>
+            <tbody >
+              <tr>
+                <td>1</td>
+                <td>Site Wireframes</td>
+                <td>John Smith</td>
+                <td>in progress</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Site Wireframes</td>
+                <td>John Smith</td>
+                <td>in progress</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Site Wireframes</td>
+                <td>John Smith</td>
+                <td>in progress</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Mobile Landing Page</td>
+                <td>Kilgore Trout</td>
+                <td>completed</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Add SEO tags</td>
+                <td>Bob Loblaw</td>
+                <td>failed qa</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Migrate to Bootstrap 3</td>
+                <td>Emily Hoenikker</td>
+                <td>in progress</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Update jQuery library</td>
+                <td>Holden Caulfield</td>
+                <td>deployed</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Issues in IE7</td>
+                <td>Jane Doe</td>
+                <td>failed qa</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Bugs from Sprint 14</td>
+                <td>Kilgore Trout</td>
+                <td>completed</td>
+              </tr>
+            </tbody>
+          </table>
+        
+        </div>
+<!-- tablescroll -->
+
+        </div> 
+        <!--  -->
+
+
+<!-- table ends -->
+
+  </div>
+  <div class="col-md-3">
+
+  <!-- Users List -->
+
+<div class="addon">
+          <p style="color: whitesmoke;">Users</p>
+          <ul>
+            <li class="clearfix">
+              <a href="#" target="_blank">
+             <!--  <img class="round" src="https://8share-production-my.s3.amazonaws.com/campaigns/4898/photos/profile/thumb_copy.png?1397732185"> -->
+              <div class="legend-info">
+                <strong>Social Good</strong>Help share a cause and do good.
+                </div></a>
+              </li>
+            <li class="clearfix">
+              <!-- <em class="hot"></em> -->
+              <div class="legend-info">
+                <strong>Fire Hot</strong>Featured hot special at the moment.
+              </div>
+            </li>
+            <li class="clearfix">
+              <!-- <em class="extra"></em> -->
+              <div class="legend-info">
+                <strong>Extra Fun</strong>Contests, surveys, prizes and more fun stuff.
+              </div>
+            </li>
+             <li class="clearfix">
+              <a href="#" target="_blank">
+           <!--    <img class="round" src="https://8share-production-my.s3.amazonaws.com/campaigns/4898/photos/profile/thumb_copy.png?1397732185"> -->
+              <div class="legend-info">
+                <strong>Social Good</strong>Help share a cause and do good.
+                </div></a>
+              </li>
+          </ul>
+        </div>
+<!-- list ends -->
+
+</div>
+
+</div>
+
+
+<!-- Chat Row -->
+<div class="col-md-12">
+
+   
+
+        <!-- Contacts & Conversations -->
+       
+
+          
+
+                <!--Header-->
+                
+
+              
+
+        <!-- Messages & Info -->
+        <div class="col-md-12 panel-wrap">
+
+            <!--Main Content / Message List-->
+            <div class="col-md-12 section-wrap" id="Messages">
+
+                <!--Header-->
+                <div class="row header-wrap">
+                    <div class="chat-header col-sm-12">
+                        <h4>Chat</h4>
+                        <div class="header-button">
+                             <a class="btn pull-right info-btn">
+                                <i class="fa fa-info-circle fa-lg"></i>
+                            </a> 
+                        </div>
+                    </div>
+                </div>
+
+                <!--Messages-->
+                <div class="row content-wrap messages">
+                    <div class="msg" *ngFor="let msg of chat" >
+                        <div class="media-body">
+                            <small class="pull-right time"><i class="fa fa-clock-o"></i> 12:10am</small>
+                            <h5 class="media-heading">{{msg[1]}}</h5>
+                            <small class="col-sm-11">{{msg[0]}}</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Message box & Send Button-->
+                <div class="row send-wrap">
+                    <div class="send-message">
+                        <div class="message-text">
+                            <textarea class="no-resize-bar form-control" rows="2" placeholder="Write a message..." [(ngModel)]="msg" ></textarea>
+                        </div>
+                        <div class="send-button">
+                            <a class="btn" (click)="sendMsg()" >Send <i class="fa fa-send"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+<!-- End Chat row -->
+
+<!-- Buttons -->
+<p style="margin-top:53px;float: right;margin-right:10px; ">
+          <button type="button" class="btn btn-default btn3d" routerLink='/debate' >Join</button>
+           <button type="button" class="btn btn-default btn3d">Create</button>
+            <button type="button" class="btn btn-default btn3d">Spectate</button>
+        </p>
+</div>
